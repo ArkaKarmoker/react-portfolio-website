@@ -11,18 +11,6 @@ A high-performance, responsive personal portfolio website built with **React 19*
 
 ---
 
-## 📸 Application Previews
-
-| Hero Section (`#home`) | About & Education (`#about`) |
-| :---: | :---: |
-| ![Hero Section](screenshots/Hero%20Section.png) | ![About Section](screenshots/About%20Section.png) |
-
-| Tech Arsenal & Skills (`#skills`) | Featured Projects (`#projects`) |
-| :---: | :---: |
-| ![Skills Section](screenshots/Skills%20Section.png) | ![Projects Section](screenshots/Projects%20Section.png) |
-
----
-
 ## ✨ Features
 
 ### 1. Modern Hero & Developer Hub
@@ -163,69 +151,6 @@ The project includes **8 automated integration test suites** in `src/test/App.te
    ✓ 7. Contact Section: validates required fields, shows errors, and displays success message on valid submission
    ✓ 8. Additional Features & Footer: toggles Dark/Light mode, scrolls to top, and renders footer links
 ```
-
----
-
-## 📂 Project Directory Structure
-
-```text
-react-portfolio-website/
-├── public/
-│   ├── images/
-│   │   ├── certificates/          # 6 verified certificate images
-│   │   ├── projects/              # 6 project screenshots (BinaryFusion, djCommerce, etc.)
-│   │   ├── socials/               # Social media SVG icons (GitHub, LinkedIn, Email)
-│   │   └── profile_pic.jpg        # Arka Karmoker profile photo
-│   ├── Arka_Karmoker_Resume.pdf   # Downloadable CV PDF (Latest)
-│   ├── favicon.svg                # Vector terminal logo favicon
-│   ├── favicon.ico                # Multi-resolution ICO (16x16 to 64x64)
-│   └── apple-touch-icon.png       # 256x256 smooth touch icon
-├── screenshots/                   # Application preview screenshots for README
-│   ├── Hero Section.png
-│   ├── About Section.png
-│   ├── Skills Section.png
-│   └── Projects Section.png
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx             # Sticky navigation, theme toggle & scroll spy
-│   │   ├── Hero.jsx               # Terminal profile, core pills (+34 more) & stats cards
-│   │   ├── About.jsx              # Bio, Profile info, Education timeline & Career Goals
-│   │   ├── Skills.jsx             # Progress bars, 40+ Tech Arsenal, LeetCode & Open Source
-│   │   ├── Projects.jsx           # Category filter bar & dynamic project grid
-│   │   ├── ProjectCard.jsx        # Individual project card with compact tech badges
-│   │   ├── Certifications.jsx     # Certificate cards & full-screen Lightbox modal
-│   │   ├── Contact.jsx            # Controlled contact form with field validation
-│   │   ├── Footer.jsx             # Quick links, social handles & copyright
-│   │   └── ScrollToTop.jsx        # Smooth scroll-to-top floating button
-│   ├── data/
-│   │   ├── portfolioData.js       # Central data store for info, education, skills & projects
-│   │   └── techIcons.js           # Offline vector datasets for 40+ technology badges
-│   ├── test/
-│   │   ├── setup.js               # Vitest environment & jest-dom setup
-│   │   └── App.test.jsx           # Comprehensive 8-suite automated test file
-│   ├── App.jsx                    # Root component with theme state & active section tracking
-│   ├── index.css                  # Tailwind CSS v4 directives & custom scrollbar styles
-│   └── main.jsx                   # Application entry point
-├── index.html                     # HTML5 template with SVG/ICO favicon & Open Graph tags
-├── package.json                   # Project metadata, dependencies & scripts
-├── vite.config.js                 # Vite 6 configuration with Tailwind CSS & React plugins
-└── README.md                      # Complete project documentation
-```
-
----
-
-## 👨‍💻 Developer Profile
-
-**Arka Karmoker**  
-*Software Engineer & Backend Developer*  
-Dhaka-1229, Bangladesh
-
-- **Portfolio:** [https://arkakarmoker.com](https://arkakarmoker.com)
-- **GitHub:** [https://github.com/ArkaKarmoker](https://github.com/ArkaKarmoker)
-- **LinkedIn:** [https://www.linkedin.com/in/arkakarmoker/](https://www.linkedin.com/in/arkakarmoker/)
-- **LeetCode:** [https://leetcode.com/u/arka_karmoker/](https://leetcode.com/u/arka_karmoker/)
-- **Kaggle:** [https://www.kaggle.com/arkakarmoker](https://www.kaggle.com/arkakarmoker)
-- **Email:** [arkakarmoker1234@gmail.com](mailto:arkakarmoker1234@gmail.com)
 
 ---
 
