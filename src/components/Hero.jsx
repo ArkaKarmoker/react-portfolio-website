@@ -4,7 +4,7 @@ import {
   ArrowRight,
   MapPin,
   Code2,
-  Sparkles,
+  GraduationCap,
   Mail,
   CheckCircle2,
 } from 'lucide-react'
@@ -179,7 +179,7 @@ const Hero = () => {
                 {/* Floating Bottom Badge inside Card */}
                 <div className="mt-3 px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/70 dark:border-slate-700/70 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <GraduationCap className="w-4 h-4 text-emerald-500 shrink-0" />
                     <span className="text-xs font-medium text-slate-700 dark:text-slate-200">
                       B.Sc. in CSE @ North South University
                     </span>
