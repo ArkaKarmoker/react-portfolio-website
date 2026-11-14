@@ -7,19 +7,19 @@
 ![Vitest](https://img.shields.io/badge/Vitest-8_Passed-4BB543?style=for-the-badge&logo=vitest&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-Clean-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 
-A modern, responsive personal portfolio built with **React 19**, **Vite 6**, and **Tailwind CSS v4** showcasing full-stack web platforms, AI/RAG systems, 40+ technology badges, verified certifications, and algorithmic problem-solving achievements.
+A modern, responsive developer portfolio built with **React 19**, **Vite 6**, and **Tailwind CSS v4**—designed to showcase full-stack web applications, AI/RAG architectures, technical proficiencies, and verified engineering credentials.
 
 ---
 
 ## ✨ Features
 
-- **Developer Hero:** Terminal-styled profile frame, pulsing status badge, CV download, and 4 metric cards (`100+`, `45+`, `10+`, `6`).
-- **About & Education:** Bio narrative, profile grid, North South University B.Sc. in CSE (`Graduated`), HSC/SSC (`Dhaka Board`), and Career Goals.
-- **Skills & Tech Arsenal:** 22 progress bars across 4 domains, 40+ interactive vector badges with domain filters, LeetCode breakdown (`100+` solved), and open-source contributions.
-- **Featured Projects:** 6 production applications (`BinaryFusion`, `FoodFinder`, `MedRec`, `MedRev`, `Ecommerce API`, `djCommerce`) with 10-category live filtering, demo links, and GitHub repos.
-- **Verified Certifications:** 6 credentials from DataCamp, Kaggle, and HackerRank with direct verification links and full-screen Lightbox modal preview.
-- **Interactive Contact:** Controlled React form with client-side validation, error handling, success confirmation, and direct contact details.
-- **Theme & UX:** Persistent Dark/Light mode toggle (`localStorage`), scroll-spy active navbar indicator, and custom branded terminal favicon (`>_`).
+- **Interactive Developer Hero**: Terminal-inspired profile showcase with live availability status, core tech stack highlights, instant resume download, and key engineering milestones.
+- **About & Academic Timeline**: Comprehensive developer biography, structured profile overview, academic timeline, and long-term engineering career objectives.
+- **Technical Skills & Tooling**: Domain-categorized proficiency meters, an interactive filterable catalog of 40+ developer tools, algorithmic problem-solving analytics (LeetCode), and open-source contributions.
+- **Dynamic Project Showcase**: Filterable portfolio of full-stack, AI/RAG, and backend systems featuring multi-category technology tags, live deployment links, and source code repositories.
+- **Certifications & Lightbox Viewer**: Verified industry credentials with interactive full-screen Lightbox inspection, zoom controls, keyboard navigation, and direct verification links.
+- **Validated Contact Workflow**: Controlled contact form with real-time field validation, email format verification, instant error feedback, and submission confirmation.
+- **Adaptive Theme & Navigation**: Persistent Dark/Light theme engine synced via `localStorage`, scroll-spy active section tracking, reading progress bar, and responsive mobile navigation.
 
 ---
 
