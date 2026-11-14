@@ -11,6 +11,12 @@ A high-performance, responsive personal portfolio website built with **React 19*
 
 ---
 
+## 📸 Application Previews
+
+![Arka Karmoker Portfolio Application Preview](screenshots/application_preview.jpeg)
+
+---
+
 ## ✨ Features
 
 ### 1. Modern Hero & Developer Hub
