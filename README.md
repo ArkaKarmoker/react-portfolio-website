@@ -11,12 +11,6 @@ A high-performance, responsive personal portfolio website built with **React 19*
 
 ---
 
-## 📸 Application Previews
-
-![Arka Karmoker Portfolio Application Preview](screenshots/application_preview.jpeg)
-
----
-
 ## ✨ Features
 
 ### 1. Modern Hero & Developer Hub
@@ -157,6 +151,12 @@ The project includes **8 automated integration test suites** in `src/test/App.te
    ✓ 7. Contact Section: validates required fields, shows errors, and displays success message on valid submission
    ✓ 8. Additional Features & Footer: toggles Dark/Light mode, scrolls to top, and renders footer links
 ```
+
+---
+
+## 📸 Application Preview
+
+![Arka Karmoker Portfolio Application Preview](screenshots/application_preview.jpeg)
 
 ---
 
