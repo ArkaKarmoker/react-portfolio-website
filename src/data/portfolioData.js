@@ -14,11 +14,11 @@ export const personalInfo = {
   shortIntro:
     'I architect and build scalable web applications, high-concurrency REST APIs, SaaS platforms, and RAG-powered AI solutions using Python, Django, DRF, React, and modern cloud databases.',
   aboutDescription: [
-    'I am a dedicated Software Engineer and Backend Developer based in Dhaka, Bangladesh, specializing in Python, Django, and Django REST Framework (DRF). Over the course of my academic and engineering journey at North South University, I have architected, built, and deployed multiple production-ready full-stack platforms—ranging from algorithmic trading SaaS applications to geospatial multi-vendor marketplaces.',
-    'Beyond backend systems, I work across the full stack with React.js, Next.js, JavaScript (ES6+), and Tailwind CSS, and have deep hands-on experience integrating Retrieval-Augmented Generation (RAG) pipelines using LlamaIndex, LangChain, Supabase (pgvector), FAISS, Hugging Face embeddings, and Google Gemini.',
+    'I am a Software Engineer and Backend Developer based in Dhaka, Bangladesh, specializing in Python, Django, and Django REST Framework (DRF). A Computer Science & Engineering graduate from North South University, I architect and deploy production-ready platforms—from algorithmic trading SaaS systems to multi-vendor marketplaces.',
+    'Across the full stack, I pair scalable backend services with modern React.js and Next.js interfaces, and build Retrieval-Augmented Generation (RAG) pipelines using vector databases and LLMs to turn complex data into fast, reliable applications.',
   ],
   careerGoals:
-    'My career goal is to engineer high-impact, fault-tolerant backend architectures and intelligent AI-driven products at scale. I aim to grow as a full-stack and backend systems engineer—solving complex concurrency, distributed caching, and applied AI challenges while delivering clean, maintainable, and well-tested software.',
+    'My goal is to architect fault-tolerant backend systems and intelligent AI-driven products at scale—solving complex challenges in high-concurrency APIs, distributed caching, and applied LLM engineering while delivering clean, well-tested software.',
   location: 'Dhaka, Bangladesh',
   address: 'Dhaka-1229, Bangladesh',
   email: 'arkakarmoker1234@gmail.com',
@@ -32,7 +32,7 @@ export const personalInfo = {
   resumeDriveUrl:
     'https://drive.google.com/file/d/159LWaPqXvxPq_NXWmV-fa2VvEmqLhBGI/view?usp=sharing',
   availability: 'Available for Full-Time Roles & Freelance Projects',
-  verbalLanguages: ['English (Professional)', 'Bengali (Native)'],
+  verbalLanguages: ['English', 'Bengali'],
   socials: {
     github: 'https://github.com/ArkaKarmoker',
     linkedin: 'https://www.linkedin.com/in/arkakarmoker/',

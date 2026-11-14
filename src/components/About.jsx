@@ -48,9 +48,9 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           {/* Left Column: Bio Description and Profile Information */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 flex flex-col gap-6">
             {/* Bio Card */}
             <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2.5">
@@ -67,7 +67,7 @@ const About = () => {
             </div>
 
             {/* Profile Information Grid */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+            <div className="flex-1 p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col justify-center">
               <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-5">
                 Profile Information
               </h3>
@@ -109,7 +109,7 @@ const About = () => {
           </div>
 
           {/* Right Column: Educational Background Timeline and Career Goals */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 flex flex-col gap-6">
             {/* Educational Background Card */}
             <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2.5">
@@ -166,7 +166,7 @@ const About = () => {
             </div>
 
             {/* Career Goals Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-emerald-500/5 via-teal-500/5 to-cyan-500/5 dark:from-emerald-500/10 dark:via-slate-900 dark:to-cyan-500/10 border border-emerald-500/25 dark:border-emerald-500/30 shadow-sm">
+            <div className="flex-1 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-emerald-500/5 via-teal-500/5 to-cyan-500/5 dark:from-emerald-500/10 dark:via-slate-900 dark:to-cyan-500/10 border border-emerald-500/25 dark:border-emerald-500/30 shadow-sm flex flex-col justify-center">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2.5">
                 <span className="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center shadow-sm">
                   <Target className="w-4 h-4" />
