@@ -33,7 +33,7 @@ export const personalInfo = {
   resumeDriveUrl:
     'https://drive.google.com/file/d/159LWaPqXvxPq_NXWmV-fa2VvEmqLhBGI/view?usp=sharing',
   availability: 'Available for Full-Time Roles & Freelance Projects',
-  workPreference: 'Open to Software Engineering Roles',
+  workPreference: 'Open to Software Engineering & AI Engineering Roles',
   workModes: ['Remote', 'Hybrid', 'On-site'],
   verbalLanguages: ['English', 'Bengali'],
   socials: {

@@ -220,6 +220,11 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
     expect(
       within(contactSection).getByText('UTC+6 (Asia/Dhaka)')
     ).toBeInTheDocument()
+    expect(
+      within(contactSection).getByText(
+        'Open to Software Engineering & AI Engineering Roles'
+      )
+    ).toBeInTheDocument()
     expect(within(contactSection).getByText('Remote')).toBeInTheDocument()
     expect(within(contactSection).getByText('Hybrid')).toBeInTheDocument()
     expect(within(contactSection).getByText('On-site')).toBeInTheDocument()
