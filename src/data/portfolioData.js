@@ -21,6 +21,7 @@ export const personalInfo = {
     'My goal is to architect fault-tolerant backend systems and intelligent AI-driven products at scale—solving complex challenges in high-concurrency APIs, distributed caching, and applied LLM engineering while delivering clean, well-tested software.',
   location: 'Dhaka, Bangladesh',
   address: 'Dhaka-1229, Bangladesh',
+  timezone: 'UTC+6 (Asia/Dhaka)',
   email: 'arkakarmoker1234@gmail.com',
   secondaryEmail: 'karmokerarka@gmail.com',
   phone: '+8801590153299',
@@ -32,6 +33,8 @@ export const personalInfo = {
   resumeDriveUrl:
     'https://drive.google.com/file/d/159LWaPqXvxPq_NXWmV-fa2VvEmqLhBGI/view?usp=sharing',
   availability: 'Available for Full-Time Roles & Freelance Projects',
+  workPreference: 'Open to Software Engineering Roles',
+  workModes: ['Remote', 'Hybrid', 'On-site'],
   verbalLanguages: ['English', 'Bengali'],
   socials: {
     github: 'https://github.com/ArkaKarmoker',

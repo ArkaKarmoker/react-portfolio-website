@@ -1,14 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Mail,
   Phone,
   MapPin,
+  Clock,
+  Briefcase,
   Send,
   CheckCircle2,
   AlertCircle,
   MessageSquare,
 } from 'lucide-react'
 import { personalInfo } from '../data/portfolioData'
+
+const getDhakaTime = () => {
+  try {
+    return new Intl.DateTimeFormat('en-US', {
+      timeZone: 'Asia/Dhaka',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    }).format(new Date())
+  } catch {
+    return ''
+  }
+}
 
 const initialFormState = {
   name: '',
@@ -21,6 +36,14 @@ const Contact = () => {
   const [formData, setFormData] = useState(initialFormState)
   const [errors, setErrors] = useState({})
   const [submittedData, setSubmittedData] = useState(null)
+  const [dhakaTime, setDhakaTime] = useState(getDhakaTime)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setDhakaTime(getDhakaTime())
+    }, 30000)
+    return () => clearInterval(intervalId)
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -100,10 +123,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          {/* Left Column: Direct Contact Cards & Social Profiles */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          {/* Left Column: Direct Contact Cards & Availability */}
+          <div className="lg:col-span-5">
+            <div className="h-full p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 Contact Information
               </h3>
@@ -117,7 +140,7 @@ const Contact = () => {
                   href={`mailto:${personalInfo.email}`}
                   className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 hover:border-emerald-500/50 transition-all group"
                 >
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div className="min-w-0">
@@ -136,7 +159,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 hover:border-emerald-500/50 transition-all group"
                 >
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -150,7 +173,7 @@ const Contact = () => {
                 </a>
 
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -162,13 +185,62 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div className="min-w-0 flex-1 flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                      <div className="text-xs font-mono uppercase text-slate-400 dark:text-slate-500">
+                        Timezone
+                      </div>
+                      <div className="text-sm font-semibold text-slate-900 dark:text-white">
+                        {personalInfo.timezone}
+                      </div>
+                    </div>
+                    {dhakaTime && (
+                      <span
+                        title="Current local time in Dhaka"
+                        className="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20"
+                      >
+                        {dhakaTime}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <Briefcase className="w-5 h-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-xs font-mono uppercase text-slate-400 dark:text-slate-500 mb-1">
+                      Work Availability
+                    </div>
+                    <div className="text-sm font-semibold text-slate-900 dark:text-white mb-2">
+                      {personalInfo.workPreference}
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {personalInfo.workModes.map((mode) => (
+                        <span
+                          key={mode}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[11px] font-mono font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                          {mode}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Column: Interactive React Contact Form */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 lg:p-10 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+            <div className="h-full p-6 sm:p-8 lg:p-10 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-col">
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
                 Send Me a Message
               </h3>

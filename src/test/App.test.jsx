@@ -214,7 +214,15 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
 
   it('7. Contact Section: validates required fields, shows errors, and displays success message on valid submission', async () => {
     const user = userEvent.setup()
-    render(<App />)
+    const { container } = render(<App />)
+
+    const contactSection = container.querySelector('#contact')
+    expect(
+      within(contactSection).getByText('UTC+6 (Asia/Dhaka)')
+    ).toBeInTheDocument()
+    expect(within(contactSection).getByText('Remote')).toBeInTheDocument()
+    expect(within(contactSection).getByText('Hybrid')).toBeInTheDocument()
+    expect(within(contactSection).getByText('On-site')).toBeInTheDocument()
 
     const submitBtn = screen.getByRole('button', { name: /Send Message/i })
 
