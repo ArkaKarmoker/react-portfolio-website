@@ -86,14 +86,9 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
           <span className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
             <Terminal className="w-5 h-5" />
           </span>
-          <div className="flex flex-col">
-            <span className="text-lg font-bold tracking-tight whitespace-nowrap text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-              {personalInfo.name}
-            </span>
-            <span className="text-[11px] font-mono whitespace-nowrap text-emerald-600 dark:text-emerald-400 hidden sm:inline">
-              &lt;SoftwareEngineer /&gt;
-            </span>
-          </div>
+          <span className="text-lg font-bold tracking-tight whitespace-nowrap text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            {personalInfo.name}
+          </span>
         </a>
 
         {/* Desktop Navigation Links */}
