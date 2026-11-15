@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
         {/* Project Context Badge */}
-        <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-slate-900/85 text-emerald-400 backdrop-blur-md border border-emerald-500/30">
+        <span className="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-slate-900/85 text-emerald-400 backdrop-blur-md border border-emerald-500/30">
           {project.badge}
         </span>
       </div>

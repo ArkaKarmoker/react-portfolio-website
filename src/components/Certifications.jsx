@@ -86,8 +86,8 @@ const Certifications = () => {
                   className="w-full h-auto block"
                 />
 
-                {/* Category Badge on Top-Left of Image */}
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-slate-900/85 text-emerald-400 backdrop-blur-md border border-emerald-500/30 z-10 pointer-events-none">
+                {/* Category Badge on Top-Right of Image */}
+                <span className="absolute top-3 right-3 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-slate-900/85 text-emerald-400 backdrop-blur-md border border-emerald-500/30 z-10 pointer-events-none">
                   {cert.category}
                 </span>
 
