@@ -135,7 +135,7 @@ const Contact = () => {
                 opportunities and collaborations.
               </p>
 
-              <div className="space-y-4">
+              <div className="flex-1 flex flex-col justify-between gap-4">
                 <a
                   href={`mailto:${personalInfo.email}`}
                   className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 hover:border-emerald-500/50 transition-all group"
@@ -384,41 +384,31 @@ const Contact = () => {
         </div>
 
         {/* Full-Width Work Availability Card */}
-        <div className="mt-8 lg:mt-10 p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div className="mt-6 lg:mt-8 p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-5">
             <div className="flex items-start sm:items-center gap-4">
               <div className="p-3.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
                 <Briefcase className="w-6 h-6" />
               </div>
               <div>
-                <div className="flex flex-wrap items-center gap-2.5 mb-1">
-                  <span className="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500">
-                    Work Availability
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                    <span className="pulsing-dot" />
-                    Available now
-                  </span>
+                <div className="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
+                  Work Availability
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
                   {personalInfo.workPreference}
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                  Flexible across timezones for full-time engineering teams,
-                  full-stack product builds, and applied AI collaborations.
-                </p>
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <div className="flex flex-wrap items-center gap-2.5">
               {personalInfo.workModes.map((mode) => (
-                <div
+                <span
                   key={mode}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/70 dark:border-slate-700/70 text-sm font-semibold text-slate-800 dark:text-slate-100"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/25"
                 >
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-sm shadow-emerald-500/50" />
-                  <span>{mode}</span>
-                </div>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                  {mode}
+                </span>
               ))}
             </div>
           </div>
