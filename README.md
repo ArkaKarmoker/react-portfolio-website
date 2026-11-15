@@ -1,11 +1,13 @@
 # 🚀 Arka Karmoker — Software Engineer Portfolio
 
-![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-v19-087EA4?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-v6-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)  
 ![Vitest](https://img.shields.io/badge/Vitest-8_Passed-4BB543?style=for-the-badge&logo=vitest&logoColor=white)
+![Testing Library](https://img.shields.io/badge/Testing_Library-v16-E33332?style=for-the-badge&logo=testinglibrary&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-Clean-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 A modern, responsive developer portfolio built with **React 19**, **Vite 6**, and **Tailwind CSS v4**—designed to showcase full-stack web applications, AI/RAG architectures, technical proficiencies, and verified engineering credentials.
 
@@ -28,12 +30,12 @@ A modern, responsive developer portfolio built with **React 19**, **Vite 6**, an
 | Layer | Technology | Purpose |
 | :--- | :--- | :--- |
 | **Core Framework** | React 19 (`react`, `react-dom`) | Declarative component UI architecture |
-| **Build Tool** | Vite 6 | Lightning-fast HMR and optimized production bundling |
+| **Build Tool** | Vite 6 (`@vitejs/plugin-react`) | Lightning-fast HMR and optimized production bundling |
 | **Styling** | Tailwind CSS v4 (`@tailwindcss/vite`) | Modern utility-first responsive styling with CSS variables |
-| **Icons** | Lucide React & Iconify (`@iconify/react`) | Pixel-perfect UI icons and official technology vector logos |
-| **Testing** | Vitest 3 + React Testing Library | Fast unit and integration test execution |
-| **Code Quality** | ESLint 9 + React Hooks Plugin | Automated linting and code consistency |
-| **Deployment** | Vercel | Single-Page Application (SPA) cloud hosting |
+| **Icons** | Lucide React, Iconify & LobeHub SVG (`lucide-react`, `@iconify/react`, `@lobehub/icons-static-svg`) | Pixel-perfect UI icons and official technology vector logos |
+| **Testing** | Vitest 3 + React Testing Library 16 + JSDOM | Fast unit and integration test execution |
+| **Code Quality** | ESLint 9 (`react-hooks`, `react-refresh`) | Automated linting and code consistency |
+| **Deployment** | Vercel (`vercel.json`) | Single-Page Application (SPA) cloud hosting & rewrites |
 
 ---
 
