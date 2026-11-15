@@ -59,7 +59,7 @@
 }
 
 .bg-grid-pattern {
-  background-size: 64px 64px;
+  background-size: 48px 48px;
   background-image:
     linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
