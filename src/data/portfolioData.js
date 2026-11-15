@@ -58,7 +58,7 @@ export const heroStats = [
   },
   {
     id: 'projects',
-    value: '10+',
+    value: '12+',
     label: 'Deployed Applications',
   },
   {
