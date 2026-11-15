@@ -10,6 +10,16 @@ import {
 } from 'lucide-react'
 import { personalInfo, heroStats, allTechnicalBadges } from '../data/portfolioData'
 
+const coreStackPills = [
+  'Python',
+  'Django',
+  'Django REST Framework',
+  'React & Next.js',
+  'PostgreSQL & Redis',
+  'RAG & LLM Pipelines',
+  'Docker',
+]
+
 const Hero = () => {
   return (
     <section
@@ -60,14 +70,7 @@ const Hero = () => {
 
             {/* Core Stack Highlights Pill */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-8">
-              {[
-                'Python',
-                'Django',
-                'Django REST Framework',
-                'React & Next.js',
-                'PostgreSQL & Redis',
-                'RAG & LLM Pipelines',
-              ].map((tech) => (
+              {coreStackPills.map((tech) => (
                 <span
                   key={tech}
                   className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-800"
@@ -82,7 +85,7 @@ const Hero = () => {
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-semibold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/60 shadow-sm transition-all hover:scale-105 group"
                 title="Explore all 40+ skills in technical arsenal"
               >
-                <span>+{allTechnicalBadges.length - 6} more</span>
+                <span>+{allTechnicalBadges.length - coreStackPills.length} more</span>
                 <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
