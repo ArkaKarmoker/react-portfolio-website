@@ -33,7 +33,7 @@ A modern, responsive developer portfolio built with **React 19**, **Vite 6**, an
 | **Icons** | Lucide React & Iconify (`@iconify/react`) | Pixel-perfect UI icons and official technology vector logos |
 | **Testing** | Vitest 3 + React Testing Library | Fast unit and integration test execution |
 | **Code Quality** | ESLint 9 + React Hooks Plugin | Automated linting and code consistency |
-| **Deployment** | Netlify / Vercel | Single-Page Application (SPA) cloud hosting |
+| **Deployment** | Vercel | Single-Page Application (SPA) cloud hosting |
 
 ---
 
