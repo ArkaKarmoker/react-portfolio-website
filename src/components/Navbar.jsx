@@ -74,19 +74,19 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
       }`}
     >
       <nav
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4"
         aria-label="Main Navigation"
       >
         {/* Brand / Logo */}
         <a
           href="/"
           onClick={() => handleNavClick('home')}
-          className="flex items-center gap-2.5 group focus:outline-none shrink-0"
+          className="flex items-center gap-2 group focus:outline-none shrink-0"
         >
-          <span className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-            <Terminal className="w-5 h-5" />
+          <span className="w-8 h-8 shrink-0 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-sm shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            <Terminal className="w-4 h-4" />
           </span>
-          <span className="text-lg font-bold tracking-tight whitespace-nowrap text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+          <span className="text-base font-bold tracking-tight whitespace-nowrap text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
             {personalInfo.name}
           </span>
         </a>
@@ -101,7 +101,7 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
                   href={item.href}
                   onClick={() => handleNavClick(item.id)}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`relative inline-flex items-center whitespace-nowrap px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`relative inline-flex items-center whitespace-nowrap px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
                       ? 'text-emerald-600 dark:text-emerald-400 font-semibold'
                       : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60'
@@ -109,7 +109,7 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute bottom-0.5 left-3.5 right-3.5 h-0.5 bg-emerald-500 rounded-full" />
+                    <span className="absolute bottom-0.5 left-3 right-3 h-0.5 bg-emerald-500 rounded-full" />
                   )}
                 </a>
               </li>
@@ -118,13 +118,13 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
         </ul>
 
         {/* Right Controls: Theme Toggle, Resume CTA, Mobile Hamburger */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
             onClick={toggleDarkMode}
             aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             title={darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-emerald-500/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all cursor-pointer"
+            className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-emerald-500/50 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all cursor-pointer"
           >
             {darkMode ? (
               <Sun className="w-4 h-4 text-amber-400" />
@@ -137,9 +137,9 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
             href={personalInfo.resumeLocalUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm shadow-emerald-600/20 transition-all hover:-translate-y-0.5"
+            className="hidden sm:inline-flex items-center gap-1.5 whitespace-nowrap px-3.5 py-1.5 rounded-lg text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm shadow-emerald-600/20 transition-all hover:-translate-y-0.5"
           >
-            <PdfIcon className="w-[18px] h-[18px]" />
+            <PdfIcon className="w-4 h-4" />
             <span>Resume</span>
           </a>
 
@@ -149,7 +149,7 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-label="Toggle navigation menu"
             aria-expanded={isMobileMenuOpen}
-            className="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-emerald-500 transition-colors cursor-pointer"
+            className="lg:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-100/80 dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:text-emerald-500 transition-colors cursor-pointer"
           >
             {isMobileMenuOpen ? (
               <X className="w-5 h-5" />
