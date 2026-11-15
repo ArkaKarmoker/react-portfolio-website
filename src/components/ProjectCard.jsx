@@ -56,10 +56,7 @@ const ProjectCard = ({ project }) => {
         )}
 
         {/* Technologies Used */}
-        <div className="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800/80">
-          <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
-            Technologies Used:
-          </div>
+        <div className="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800/80">
           <div className="flex flex-wrap gap-1.5 mb-5">
             {project.technologies.map((tech) => (
               <span
