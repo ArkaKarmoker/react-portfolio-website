@@ -220,6 +220,9 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
     expect(
       within(contactSection).getByText('UTC+6 (Asia/Dhaka)')
     ).toBeInTheDocument()
+    expect(within(contactSection).getByText(/^Local:\s/i)).toHaveAttribute(
+      'datetime'
+    )
     expect(
       within(contactSection).getByText(
         'Open to Software Engineering & AI Engineering Roles'

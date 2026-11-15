@@ -14,14 +14,16 @@ import { personalInfo } from '../data/portfolioData'
 
 const getDhakaTime = () => {
   try {
-    return new Intl.DateTimeFormat('en-US', {
+    const now = new Date()
+    const display = new Intl.DateTimeFormat('en-US', {
       timeZone: 'Asia/Dhaka',
       hour: 'numeric',
       minute: '2-digit',
       hour12: true,
-    }).format(new Date())
+    }).format(now)
+    return { display, dateTime: now.toISOString() }
   } catch {
-    return ''
+    return null
   }
 }
 
@@ -39,10 +41,30 @@ const Contact = () => {
   const [dhakaTime, setDhakaTime] = useState(getDhakaTime)
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    let intervalId
+
+    const syncClock = () => {
       setDhakaTime(getDhakaTime())
-    }, 30000)
-    return () => clearInterval(intervalId)
+    }
+
+    const msUntilNextMinute = 60000 - (Date.now() % 60000)
+    const timeoutId = setTimeout(() => {
+      syncClock()
+      intervalId = setInterval(syncClock, 60000)
+    }, msUntilNextMinute)
+
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        syncClock()
+      }
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => {
+      clearTimeout(timeoutId)
+      if (intervalId) clearInterval(intervalId)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
   }, [])
 
   const handleChange = (e) => {
@@ -200,12 +222,13 @@ const Contact = () => {
                       </div>
                     </div>
                     {dhakaTime && (
-                      <span
-                        title="Current local time in Dhaka"
+                      <time
+                        dateTime={dhakaTime.dateTime}
+                        title="Current local time in Dhaka (UTC+6)"
                         className="px-2.5 py-1 rounded-lg text-[11px] font-mono font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20"
                       >
-                        {dhakaTime}
-                      </span>
+                        Local: {dhakaTime.display}
+                      </time>
                     )}
                   </div>
                 </div>
