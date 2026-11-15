@@ -1,4 +1,4 @@
-# 🚀 Arka Karmoker — Software Engineer & Backend Developer Portfolio
+# 🚀 Arka Karmoker — Software Engineer Portfolio
 
 ![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)

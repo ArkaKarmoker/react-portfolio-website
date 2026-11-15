@@ -57,7 +57,7 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
     ).toBeInTheDocument()
     expect(
       screen.getByRole('heading', {
-        name: /Software Engineer & Backend Developer/i,
+        name: /^Software Engineer$/i,
         level: 2,
       })
     ).toBeInTheDocument()
@@ -174,11 +174,12 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
 
   it('6. Certifications Section: renders all 6 certifications and opens Lightbox preview', async () => {
     const user = userEvent.setup()
-    render(<App />)
+    const { container } = render(<App />)
 
+    const certsSection = container.querySelector('#certifications')
     certificationsData.forEach((cert) => {
       expect(
-        screen.getByRole('heading', { name: cert.title })
+        within(certsSection).getByRole('heading', { name: cert.title, level: 3 })
       ).toBeInTheDocument()
     })
 

@@ -2,7 +2,7 @@ export const personalInfo = {
   name: 'Arka Karmoker',
   firstName: 'Arka',
   lastName: 'Karmoker',
-  title: 'Software Engineer & Backend Developer',
+  title: 'Software Engineer',
   roles: [
     'Software Engineer',
     'Backend Developer (Python & Django)',
@@ -10,11 +10,11 @@ export const personalInfo = {
     'AI & RAG Pipeline Engineer',
   ],
   tagline:
-    'Dedicated Software Engineer and Backend Developer specializing in Python and Django. Experienced in building and deploying robust, scalable web applications with advanced AI integration, demonstrating a practical ability to turn concepts into efficient code.',
+    'Dedicated Software Engineer specializing in Python, Django, and modern React architectures. Experienced in building and deploying robust, scalable web applications with advanced AI integration, turning concepts into clean, efficient code.',
   shortIntro:
     'I architect and build scalable web applications, high-concurrency REST APIs, SaaS platforms, and RAG-powered AI solutions using Python, Django, DRF, React, and modern cloud databases.',
   aboutDescription: [
-    'I am a Software Engineer and Backend Developer based in Dhaka, Bangladesh, specializing in Python, Django, and Django REST Framework (DRF). A Computer Science & Engineering graduate from North South University, I architect and deploy production-ready platforms—from algorithmic trading SaaS systems to multi-vendor marketplaces.',
+    'I am a Software Engineer based in Dhaka, Bangladesh, specializing in Python, Django, and Django REST Framework (DRF). A Computer Science & Engineering graduate from North South University, I architect and deploy production-ready platforms—from algorithmic trading SaaS systems to multi-vendor marketplaces.',
     'Across the full stack, I pair scalable backend services with modern React.js and Next.js interfaces, and build Retrieval-Augmented Generation (RAG) pipelines using vector databases and LLMs to turn complex data into fast, reliable applications.',
   ],
   careerGoals:
