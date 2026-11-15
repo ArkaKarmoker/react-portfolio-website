@@ -16,6 +16,8 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
     render(<App />)
 
     const nav = screen.getByRole('navigation', { name: /main navigation/i })
+    const brandLink = within(nav).getByRole('link', { name: /Arka Karmoker/i })
+    expect(brandLink).toHaveAttribute('href', '/')
     expect(within(nav).getByText('Arka Karmoker')).toBeInTheDocument()
 
     // Check required links: Home, About, Skills, Projects, Contact
@@ -275,7 +277,13 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
       behavior: 'smooth',
     })
 
-    // Footer social links & copyright
+    // Footer social links, credit & copyright
     expect(screen.getByText(/All rights reserved\./i)).toBeInTheDocument()
+    const footer = screen.getByRole('contentinfo')
+    const creditLine = within(footer).getByText(/Developed by/i)
+    expect(creditLine).toHaveTextContent(/Developed by\s+Arka Karmoker/i)
+    expect(
+      within(creditLine).getByRole('link', { name: 'Arka Karmoker' })
+    ).toHaveAttribute('href', 'https://github.com/ArkaKarmoker')
   })
 })

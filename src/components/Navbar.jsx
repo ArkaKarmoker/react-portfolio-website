@@ -79,7 +79,7 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
       >
         {/* Brand / Logo */}
         <a
-          href="#home"
+          href="/"
           onClick={() => handleNavClick('home')}
           className="flex items-center gap-2.5 group focus:outline-none shrink-0"
         >

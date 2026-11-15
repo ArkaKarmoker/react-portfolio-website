@@ -1,5 +1,5 @@
 import React from 'react'
-import { Terminal, Heart, Mail, MapPin } from 'lucide-react'
+import { Terminal, Mail, MapPin } from 'lucide-react'
 import { personalInfo, socialProfiles } from '../data/portfolioData'
 
 const Footer = () => {
@@ -102,10 +102,8 @@ const Footer = () => {
             &copy; {currentYear} <strong>{personalInfo.name}</strong>. All rights
             reserved.
           </p>
-          <p className="inline-flex items-center gap-1">
-            Built with React.js, Vite &amp; Tailwind CSS{' '}
-            <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline" />{' '}
-            by{' '}
+          <p>
+            Developed by{' '}
             <a
               href={personalInfo.socials.github}
               target="_blank"
