@@ -155,6 +155,13 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
       within(filteredCards[0]).getByRole('heading', { name: 'MedRev' })
     ).toBeInTheDocument()
 
+    // Filter projects by "Bootstrap"
+    const bootstrapFilterBtn = within(filterGroup).getByRole('button', {
+      name: /Bootstrap/i,
+    })
+    await user.click(bootstrapFilterBtn)
+    expect(screen.getAllByTestId('project-card').length).toBe(2)
+
     // Reset filter back to "All"
     const allFilterBtn = within(filterGroup).getByRole('button', {
       name: /^All/i,
