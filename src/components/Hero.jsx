@@ -201,7 +201,7 @@ const Hero = () => {
           {heroStats.map((stat) => (
             <div
               key={stat.id}
-              className="p-5 sm:p-6 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-emerald-500/25 dark:border-emerald-500/25 shadow-sm hover:border-emerald-500/70 dark:hover:border-emerald-400/70 hover:shadow-md hover:shadow-emerald-500/15 hover:-translate-y-1 transition-all duration-300"
+              className="p-5 sm:p-6 rounded-2xl bg-white/90 dark:bg-slate-900/90 border-[1.5px] border-emerald-500/45 dark:border-emerald-500/45 shadow-md shadow-emerald-500/10 hover:border-emerald-400 dark:hover:border-emerald-400 hover:shadow-emerald-500/20 hover:-translate-y-1 transition-all duration-300"
             >
               <div className="text-3xl sm:text-4xl font-extrabold font-mono text-emerald-600 dark:text-emerald-400 mb-1">
                 {stat.value}
