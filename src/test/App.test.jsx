@@ -40,6 +40,12 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
       '#contact'
     )
 
+    // Navbar Resume button should open PDF in new tab (not force download)
+    const navResumeLink = within(nav).getByRole('link', { name: 'Resume' })
+    expect(navResumeLink).toHaveAttribute('href', '/Arka_Karmoker_Resume.pdf')
+    expect(navResumeLink).toHaveAttribute('target', '_blank')
+    expect(navResumeLink).not.toHaveAttribute('download')
+
     // Test mobile menu toggle
     const mobileToggleBtn = screen.getByRole('button', {
       name: /toggle navigation menu/i,
@@ -68,6 +74,8 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
 
     const downloadCvBtn = screen.getByRole('link', { name: /Download CV/i })
     expect(downloadCvBtn).toBeInTheDocument()
+    expect(downloadCvBtn).toHaveAttribute('href', '/Arka_Karmoker_Resume.pdf')
+    expect(downloadCvBtn).toHaveAttribute('download', 'Arka_Karmoker_Resume.pdf')
 
     const viewProjectsBtn = screen.getByRole('link', { name: /View Projects/i })
     expect(viewProjectsBtn).toHaveAttribute('href', '#projects')

@@ -4,7 +4,7 @@ import {
   X,
   Sun,
   Moon,
-  Download,
+  Eye,
   Terminal,
   ExternalLink,
 } from 'lucide-react'
@@ -121,10 +121,11 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
 
           <a
             href={personalInfo.resumeLocalUrl}
-            download="Arka_Karmoker_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm shadow-emerald-600/20 transition-all hover:-translate-y-0.5"
           >
-            <Download className="w-4 h-4" />
+            <Eye className="w-4 h-4" />
             <span>Resume</span>
           </a>
 
@@ -174,11 +175,13 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
           <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex gap-2">
             <a
               href={personalInfo.resumeLocalUrl}
-              download="Arka_Karmoker_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-colors"
             >
-              <Download className="w-4 h-4" />
-              Download CV
+              <Eye className="w-4 h-4" />
+              View Resume
             </a>
             <a
               href={personalInfo.resumeDriveUrl}
