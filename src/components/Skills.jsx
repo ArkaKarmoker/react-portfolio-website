@@ -20,11 +20,35 @@ import {
   leetcodeStats,
 } from '../data/portfolioData'
 
-const categoryIconMap = {
-  backend: Code2,
-  frontend: Layers,
-  database: Database,
-  ai: BrainCircuit,
+const categoryThemeMap = {
+  backend: {
+    icon: Code2,
+    cardBorder: 'border-emerald-500/25 hover:border-emerald-500/60',
+    iconBadge: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
+    percentText: 'text-emerald-600 dark:text-emerald-400',
+    barGradient: 'from-emerald-500 to-teal-400',
+  },
+  frontend: {
+    icon: Layers,
+    cardBorder: 'border-cyan-500/25 hover:border-cyan-500/60',
+    iconBadge: 'bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border-cyan-500/20',
+    percentText: 'text-cyan-700 dark:text-cyan-400',
+    barGradient: 'from-cyan-500 to-blue-500',
+  },
+  database: {
+    icon: Database,
+    cardBorder: 'border-amber-500/25 hover:border-amber-500/60',
+    iconBadge: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/20',
+    percentText: 'text-amber-700 dark:text-amber-400',
+    barGradient: 'from-amber-500 to-orange-400',
+  },
+  ai: {
+    icon: BrainCircuit,
+    cardBorder: 'border-violet-500/25 hover:border-violet-500/60',
+    iconBadge: 'bg-violet-500/10 text-violet-600 dark:text-violet-400 border-violet-500/20',
+    percentText: 'text-violet-600 dark:text-violet-400',
+    barGradient: 'from-violet-500 to-purple-400',
+  },
 }
 
 const badgeCategories = [
@@ -67,14 +91,15 @@ const Skills = () => {
         {/* 1. Skill Cards with Progress Bars */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {skillCategories.map((category) => {
-            const IconComponent = categoryIconMap[category.id] || Wrench
+            const theme = categoryThemeMap[category.id] || categoryThemeMap.backend
+            const IconComponent = theme.icon || Wrench
             return (
               <div
                 key={category.id}
-                className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:border-emerald-500/40 transition-all"
+                className={`p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border ${theme.cardBorder} shadow-sm transition-all`}
               >
                 <div className="flex items-start gap-3.5 mb-6">
-                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <div className={`p-3 rounded-xl border ${theme.iconBadge} shrink-0`}>
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <div>
@@ -94,7 +119,7 @@ const Skills = () => {
                         <span className="text-slate-800 dark:text-slate-200">
                           {skill.name}
                         </span>
-                        <span className="font-mono text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                        <span className={`font-mono text-xs font-semibold ${theme.percentText}`}>
                           {skill.level}%
                         </span>
                       </div>
@@ -107,7 +132,7 @@ const Skills = () => {
                         aria-label={`${skill.name} proficiency`}
                       >
                         <div
-                          className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-700"
+                          className={`h-full rounded-full bg-gradient-to-r ${theme.barGradient} transition-all duration-700`}
                           style={{ width: `${skill.level}%` }}
                         />
                       </div>
