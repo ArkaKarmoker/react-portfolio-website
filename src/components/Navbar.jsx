@@ -4,11 +4,30 @@ import {
   X,
   Sun,
   Moon,
-  Eye,
   Terminal,
   ExternalLink,
 } from 'lucide-react'
 import { personalInfo } from '../data/portfolioData'
+
+const PdfIcon = ({ className = 'w-4 h-4' }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+    className={className}
+  >
+    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+    <path d="M5 12V5a2 2 0 0 1 2-2h7l5 5v4" />
+    <path d="M5 18h1.5a1.5 1.5 0 0 0 0-3H5v6" />
+    <path d="M17 18h2" />
+    <path d="M20 15h-3v6" />
+    <path d="M11 15v6h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z" />
+  </svg>
+)
 
 const navItems = [
   { id: 'home', label: 'Home', href: '#home' },
@@ -125,7 +144,7 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm shadow-emerald-600/20 transition-all hover:-translate-y-0.5"
           >
-            <Eye className="w-4 h-4" />
+            <PdfIcon className="w-[18px] h-[18px]" />
             <span>Resume</span>
           </a>
 
@@ -180,7 +199,7 @@ const Navbar = ({ activeSection, setActiveSection, darkMode, toggleDarkMode }) =
               onClick={() => setIsMobileMenuOpen(false)}
               className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-colors"
             >
-              <Eye className="w-4 h-4" />
+              <PdfIcon className="w-[18px] h-[18px]" />
               View Resume
             </a>
             <a
