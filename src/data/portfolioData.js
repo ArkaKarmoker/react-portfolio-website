@@ -45,6 +45,7 @@ export const personalInfo = {
     twitter: 'https://x.com/KarmokerArka',
     instagram: 'https://www.instagram.com/arka_karmoker/',
     telegram: 'https://t.me/arka_karmoker',
+    whatsapp: 'https://wa.me/arka_karmoker',
   },
 }
 
@@ -641,5 +642,11 @@ export const socialProfiles = [
     handle: '@arka_karmoker',
     url: 'https://t.me/arka_karmoker',
     icon: '/images/socials/telegram.svg',
+  },
+  {
+    name: 'WhatsApp',
+    handle: '@arka_karmoker',
+    url: 'https://wa.me/arka_karmoker',
+    icon: '/images/socials/whatsapp.svg',
   },
 ]

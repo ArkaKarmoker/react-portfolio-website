@@ -298,5 +298,8 @@ describe('Personal Portfolio Website - Requirements & Integration Suite', () => 
     expect(
       within(creditLine).getByRole('link', { name: 'Arka Karmoker' })
     ).toHaveAttribute('href', 'https://github.com/ArkaKarmoker')
+    expect(
+      within(footer).getByRole('link', { name: /WhatsApp/i })
+    ).toHaveAttribute('href', 'https://wa.me/arka_karmoker')
   })
 })
